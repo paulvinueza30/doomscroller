@@ -57,9 +57,11 @@ and displays results as memes + evidence phrases on a clean dark-themed dashboar
 | Orchestration | n8n (self-hosted) | Pipeline + DB + webhook in one |
 | AI | OpenAI gpt-4o-mini | Sentiment + insight messages |
 | Backend | Bun + TypeScript | Meme mapping, caching, static files |
-| Frontend | SvelteKit + Tailwind | Static SPA via adapter-static |
+| Frontend | Bun + SvelteKit + Tailwind | Static SPA via adapter-static |
 | Charts | Chart.js + svelte-chartjs | 7-day and 30-day trend lines |
 | Deployment | Docker Compose + Traefik | HTTPS, auto-cert |
+
+**All JavaScript/TypeScript uses Bun** — no Node.js required.
 
 ---
 
@@ -130,8 +132,8 @@ bun dev          # starts on :3000
 
 # Frontend
 cd frontend
-npm install
-npm run dev      # starts on :5173
+bun install
+bun run dev      # starts on :5173
 
 # Backend tests
 cd backend

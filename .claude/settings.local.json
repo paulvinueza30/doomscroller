@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun:*)",
+      "Bash(/usr/bin/bun test:*)",
+      "Bash(/usr/bin/bun run:*)",
+      "Bash(npm run:*)",
+      "Bash(/usr/bin/bun tsc:*)",
+      "Bash(tsc:*)",
+      "Bash(/usr/bin/tsc:*)",
+      "Bash(node_modules/.bin/svelte-check:*)"
+    ]
+  }
+}

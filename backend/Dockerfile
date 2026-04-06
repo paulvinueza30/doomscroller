@@ -19,7 +19,7 @@ WORKDIR /app
 COPY --from=build /app/server /app/server
 COPY --from=build /app/public /app/public
 
-ENV NODE_ENV=production
+ENV BUN_ENV=production
 ENV PORT=3000
 
 EXPOSE 3000

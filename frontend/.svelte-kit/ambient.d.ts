@@ -38,10 +38,10 @@
  * The above values will be the same _even if_ different values for `ENVIRONMENT` or `PUBLIC_BASE_URL` are set at runtime, as they are statically replaced in your code with their build time values.
  */
 declare module '$env/static/private' {
+	export const VITE_API_URL: string;
 	export const SHELL: string;
 	export const npm_command: string;
 	export const LSCOLORS: string;
-	export const COREPACK_ENABLE_AUTO_PIN: string;
 	export const GHOSTTY_BIN_DIR: string;
 	export const npm_config_userconfig: string;
 	export const COLORTERM: string;
@@ -78,23 +78,21 @@ declare module '$env/static/private' {
 	export const GOBIN: string;
 	export const XDG_SEAT: string;
 	export const PWD: string;
-	export const XDG_SESSION_DESKTOP: string;
 	export const LOGNAME: string;
+	export const XDG_SESSION_DESKTOP: string;
 	export const ATUIN_SHLVL: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_config_init_module: string;
 	export const SYSTEMD_EXEC_PID: string;
-	export const NoDefaultCurrentDirectoryInExePath: string;
 	export const ATUIN_SESSION_MANUAL: string;
 	export const TERMINAL: string;
-	export const CLAUDECODE: string;
 	export const QT_STYLE_OVERRIDE: string;
 	export const MOTD_SHOWN: string;
 	export const GHOSTTY_SHELL_FEATURES: string;
 	export const HOME: string;
 	export const LANG: string;
-	export const LS_COLORS: string;
 	export const _JAVA_AWT_WM_NONREPARENTING: string;
+	export const LS_COLORS: string;
 	export const XDG_CURRENT_DESKTOP: string;
 	export const npm_package_version: string;
 	export const MEMORY_PRESSURE_WATCH: string;
@@ -110,8 +108,8 @@ declare module '$env/static/private' {
 	export const __MISE_SHIM: string;
 	export const YSU_VERSION: string;
 	export const STARSHIP_SESSION_KEY: string;
-	export const UWSM_WAIT_VARNAMES: string;
 	export const QT_QPA_PLATFORM: string;
+	export const UWSM_WAIT_VARNAMES: string;
 	export const XDG_CACHE_HOME: string;
 	export const npm_lifecycle_script: string;
 	export const SDL_IM_MODULE: string;
@@ -119,12 +117,12 @@ declare module '$env/static/private' {
 	export const npm_config_npm_version: string;
 	export const GEM_HOME: string;
 	export const GHOSTTY_RESOURCES_DIR: string;
-	export const NPM_CONFIG_PREFIX: string;
 	export const XDG_SESSION_CLASS: string;
-	export const TERMINFO: string;
 	export const TERM: string;
+	export const TERMINFO: string;
 	export const npm_package_name: string;
 	export const ZSH: string;
+	export const npm_config_prefix: string;
 	export const GOOGLE_CLOUD_SDK_HOME: string;
 	export const USER: string;
 	export const ATUIN_TMUX_POPUP_HEIGHT: string;
@@ -135,12 +133,11 @@ declare module '$env/static/private' {
 	export const HYPRLAND_INSTANCE_SIGNATURE: string;
 	export const DISPLAY: string;
 	export const npm_lifecycle_event: string;
-	export const SHLVL: string;
 	export const HL_EXEC_RULE_TOKEN: string;
+	export const SHLVL: string;
 	export const MOZ_ENABLE_WAYLAND: string;
 	export const OMARCHY_SCREENSHOT_DIR: string;
 	export const BW_SESSION: string;
-	export const GIT_EDITOR: string;
 	export const PAGER: string;
 	export const QT_IM_MODULE: string;
 	export const XDG_VTNR: string;
@@ -149,15 +146,12 @@ declare module '$env/static/private' {
 	export const ATUIN_SESSION: string;
 	export const MANAGERPIDFDID: string;
 	export const npm_config_user_agent: string;
-	export const OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE: string;
 	export const XDG_STATE_HOME: string;
 	export const npm_execpath: string;
 	export const ATUIN_HISTORY_ID: string;
-	export const DISABLE_AUTOUPDATER: string;
 	export const XDG_RUNTIME_DIR: string;
-	export const CLAUDE_CODE_ENTRYPOINT: string;
-	export const NVCC_CCBIN: string;
 	export const DEBUGINFOD_URLS: string;
+	export const NVCC_CCBIN: string;
 	export const npm_package_json: string;
 	export const XDG_DATA_DIRS: string;
 	export const GDK_BACKEND: string;
@@ -171,8 +165,8 @@ declare module '$env/static/private' {
 	export const npm_config_global_prefix: string;
 	export const HG: string;
 	export const MAIL: string;
-	export const UWSM_FINALIZE_VARNAMES: string;
 	export const GUM_CONFIRM_UNSELECTED_FOREGROUND: string;
+	export const UWSM_FINALIZE_VARNAMES: string;
 	export const GUM_CONFIRM_UNSELECTED_BACKGROUND: string;
 	export const npm_node_execpath: string;
 	export const OLDPWD: string;
@@ -180,6 +174,7 @@ declare module '$env/static/private' {
 	export const HYPRCURSOR_SIZE: string;
 	export const TERM_PROGRAM: string;
 	export const _: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -266,10 +261,10 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		VITE_API_URL: string;
 		SHELL: string;
 		npm_command: string;
 		LSCOLORS: string;
-		COREPACK_ENABLE_AUTO_PIN: string;
 		GHOSTTY_BIN_DIR: string;
 		npm_config_userconfig: string;
 		COLORTERM: string;
@@ -306,23 +301,21 @@ declare module '$env/dynamic/private' {
 		GOBIN: string;
 		XDG_SEAT: string;
 		PWD: string;
-		XDG_SESSION_DESKTOP: string;
 		LOGNAME: string;
+		XDG_SESSION_DESKTOP: string;
 		ATUIN_SHLVL: string;
 		XDG_SESSION_TYPE: string;
 		npm_config_init_module: string;
 		SYSTEMD_EXEC_PID: string;
-		NoDefaultCurrentDirectoryInExePath: string;
 		ATUIN_SESSION_MANUAL: string;
 		TERMINAL: string;
-		CLAUDECODE: string;
 		QT_STYLE_OVERRIDE: string;
 		MOTD_SHOWN: string;
 		GHOSTTY_SHELL_FEATURES: string;
 		HOME: string;
 		LANG: string;
-		LS_COLORS: string;
 		_JAVA_AWT_WM_NONREPARENTING: string;
+		LS_COLORS: string;
 		XDG_CURRENT_DESKTOP: string;
 		npm_package_version: string;
 		MEMORY_PRESSURE_WATCH: string;
@@ -338,8 +331,8 @@ declare module '$env/dynamic/private' {
 		__MISE_SHIM: string;
 		YSU_VERSION: string;
 		STARSHIP_SESSION_KEY: string;
-		UWSM_WAIT_VARNAMES: string;
 		QT_QPA_PLATFORM: string;
+		UWSM_WAIT_VARNAMES: string;
 		XDG_CACHE_HOME: string;
 		npm_lifecycle_script: string;
 		SDL_IM_MODULE: string;
@@ -347,12 +340,12 @@ declare module '$env/dynamic/private' {
 		npm_config_npm_version: string;
 		GEM_HOME: string;
 		GHOSTTY_RESOURCES_DIR: string;
-		NPM_CONFIG_PREFIX: string;
 		XDG_SESSION_CLASS: string;
-		TERMINFO: string;
 		TERM: string;
+		TERMINFO: string;
 		npm_package_name: string;
 		ZSH: string;
+		npm_config_prefix: string;
 		GOOGLE_CLOUD_SDK_HOME: string;
 		USER: string;
 		ATUIN_TMUX_POPUP_HEIGHT: string;
@@ -363,12 +356,11 @@ declare module '$env/dynamic/private' {
 		HYPRLAND_INSTANCE_SIGNATURE: string;
 		DISPLAY: string;
 		npm_lifecycle_event: string;
-		SHLVL: string;
 		HL_EXEC_RULE_TOKEN: string;
+		SHLVL: string;
 		MOZ_ENABLE_WAYLAND: string;
 		OMARCHY_SCREENSHOT_DIR: string;
 		BW_SESSION: string;
-		GIT_EDITOR: string;
 		PAGER: string;
 		QT_IM_MODULE: string;
 		XDG_VTNR: string;
@@ -377,15 +369,12 @@ declare module '$env/dynamic/private' {
 		ATUIN_SESSION: string;
 		MANAGERPIDFDID: string;
 		npm_config_user_agent: string;
-		OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE: string;
 		XDG_STATE_HOME: string;
 		npm_execpath: string;
 		ATUIN_HISTORY_ID: string;
-		DISABLE_AUTOUPDATER: string;
 		XDG_RUNTIME_DIR: string;
-		CLAUDE_CODE_ENTRYPOINT: string;
-		NVCC_CCBIN: string;
 		DEBUGINFOD_URLS: string;
+		NVCC_CCBIN: string;
 		npm_package_json: string;
 		XDG_DATA_DIRS: string;
 		GDK_BACKEND: string;
@@ -399,8 +388,8 @@ declare module '$env/dynamic/private' {
 		npm_config_global_prefix: string;
 		HG: string;
 		MAIL: string;
-		UWSM_FINALIZE_VARNAMES: string;
 		GUM_CONFIRM_UNSELECTED_FOREGROUND: string;
+		UWSM_FINALIZE_VARNAMES: string;
 		GUM_CONFIRM_UNSELECTED_BACKGROUND: string;
 		npm_node_execpath: string;
 		OLDPWD: string;
@@ -408,6 +397,7 @@ declare module '$env/dynamic/private' {
 		HYPRCURSOR_SIZE: string;
 		TERM_PROGRAM: string;
 		_: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
