@@ -77,7 +77,7 @@ Returns the latest aggregate + historical data for charts.
 ## Tasks
 
 ### Task 13: Project Scaffolding
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Initialize Bun project: `bun init backend`
@@ -125,15 +125,15 @@ CERT_RESOLVER=myresolver
 ```
 
 **Acceptance Criteria**:
-- [ ] `bun install` succeeds
-- [ ] `.gitignore` exists with `.env` entry
-- [ ] `.env.example` exists
-- [ ] Directory structure created
+- [x] `bun install` succeeds
+- [x] `.gitignore` exists with `.env` entry
+- [x] `.env.example` exists
+- [x] Directory structure created
 
 ---
 
 ### Task 14: Bun Server Setup
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `Bun.serve` server
@@ -190,15 +190,15 @@ console.log(`Server running on http://localhost:${server.port}`);
 ```
 
 **Acceptance Criteria**:
-- [ ] Server starts on port 3000
-- [ ] CORS headers set correctly
-- [ ] Error handling works
-- [ ] Health check endpoint works
+- [x] Server starts on port 3000
+- [x] CORS headers set correctly
+- [x] Error handling works
+- [x] Health check endpoint works
 
 ---
 
 ### Task 15: n8n Webhook Client
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create client to fetch from n8n webhook
@@ -280,16 +280,16 @@ export async function fetchFromN8N(): Promise<N8NResponse> {
 ```
 
 **Acceptance Criteria**:
-- [ ] Fetches from n8n webhook successfully
-- [ ] Handles authentication (if API key provided)
-- [ ] Caches data with5-minute TTL
-- [ ] Error handling returns meaningful errors
-- [ ] Retries on failure (optional)
+- [x] Fetches from n8n webhook successfully
+- [x] Handles authentication (if API key provided)
+- [x] Caches data with5-minute TTL
+- [x] Error handling returns meaningful errors
+- [x] Retries on failure (optional)
 
 ---
 
 ### Task 16: Meme Mapping Function
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create meme mapping function
@@ -330,15 +330,15 @@ export function addMemeToAggregate(aggregate: AggregateData): AggregateDataWithD
 ```
 
 **Acceptance Criteria**:
-- [ ] All sentiment ranges covered (0-100)
-- [ ] Returns correct meme for each range
-- [ ] Default fallback exists
-- [ ] Function is pure (no side effects)
+- [x] All sentiment ranges covered (0-100)
+- [x] Returns correct meme for each range
+- [x] Default fallback exists
+- [x] Function is pure (no side effects)
 
 ---
 
 ### Task 17: GET /api/doom Endpoint
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Implement GET /api/doom endpoint
@@ -371,16 +371,16 @@ async function getDoomData() {
 ```
 
 **Acceptance Criteria**:
-- [ ] endpoint returns correct JSON structure
-- [ ] Memes mapped correctly to sentiment
-- [ ] Data fetched from n8n webhook
-- [ ] Response time <500ms (with caching)
-- [ ] Error handling returns500 status
+- [x] endpoint returns correct JSON structure
+- [x] Memes mapped correctly to sentiment
+- [x] Data fetched from n8n webhook
+- [x] Response time <500ms (with caching)
+- [x] Error handling returns500 status
 
 ---
 
 ### Task 18: Static File Serving (Memes)
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Add static file server for memes
@@ -476,16 +476,16 @@ console.log(`Server running on http://localhost:${server.port}`);
 ```
 
 **Acceptance Criteria**:
-- [ ] Memes stored in `backend/public/memes/`
-- [ ] `/memes/:filename` serves static files
-- [ ] Correct Content-Type headers
-- [ ] Cache headers set for performance
-- [ ] 404 for missing files
+- [x] Memes stored in `backend/public/memes/`
+- [x] `/memes/:filename` serves static files
+- [x] Correct Content-Type headers
+- [x] Cache headers set for performance
+- [x] 404 for missing files
 
 ---
 
 ### Task 19: Download Meme Images
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Search the web for clean, recognizable versions of each meme
@@ -527,10 +527,10 @@ ls -lh backend/public/memes/
 ```
 
 **Acceptance Criteria**:
-- [ ] Directory `backend/public/memes/` exists
-- [ ] All 8 meme files present and non-empty
-- [ ] Filenames match exactly (see meme-map.ts)
-- [ ] Memes accessible via `/memes/:filename` once server runs
+- [x] Directory `backend/public/memes/` exists
+- [x] All 8 meme files present and non-empty
+- [x] Filenames match exactly (see meme-map.ts)
+- [x] Memes accessible via `/memes/:filename` once server runs
 
 **Notes**:
 - Add `.gitkeep` to `backend/public/memes/` so the empty dir is tracked if images are gitignored
@@ -539,7 +539,7 @@ ls -lh backend/public/memes/
 ---
 
 ### Task 21: Write Backend Tests
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `backend/src/tests/` directory
@@ -604,15 +604,15 @@ test('GET /health returns ok', async () => {
 ```
 
 **Acceptance Criteria**:
-- [ ] `bun test` passes with no failures
-- [ ] All 8 meme sentiment ranges covered
-- [ ] `/api/doom` tested with mocked n8n client
-- [ ] `/health` endpoint tested
+- [x] `bun test` passes with no failures
+- [x] All 8 meme sentiment ranges covered
+- [x] `/api/doom` tested with mocked n8n client
+- [x] `/health` endpoint tested
 
 ---
 
 ### Task 20: Dockerfile for Backend
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `Dockerfile` for Bun backend
@@ -651,23 +651,23 @@ CMD ["./server"]
 ```
 
 **Acceptance Criteria**:
-- [ ] Docker image builds successfully
-- [ ] Container starts on port 3000
-- [ ] Health check endpoint accessible
-- [ ] `/api/doom` endpoint accessible
-- [ ] `/memes/*` serves static files
+- [x] Docker image builds successfully
+- [x] Container starts on port 3000
+- [x] Health check endpoint accessible
+- [x] `/api/doom` endpoint accessible
+- [x] `/memes/*` serves static files
 
 ---
 
 ## After Wave Completion
 
 ### Checklist
-- [ ] All tasks marked complete
-- [ ] Server starts successfully
-- [ ] GET /api/doom returns correct JSON
-- [ ] Memes mapped correctly
-- [ ] Docker image builds
-- [ ] .gitignore includes `.env`
+- [x] All tasks marked complete
+- [x] Server starts successfully
+- [x] GET /api/doom returns correct JSON
+- [x] Memes mapped correctly
+- [x] Docker image builds
+- [x] .gitignore includes `.env`
 
 ### Next Wave
 Move to **Wave 3: Svelte Frontend** - needs `/api/doom` endpoint.

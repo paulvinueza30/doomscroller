@@ -55,7 +55,7 @@ This wave builds the Svelte frontend that displays sentiment data:
 ## Tasks
 
 ### Task 22: Project Scaffolding
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Initialize Svelte: `npm create svelte@latest frontend`
@@ -102,16 +102,16 @@ VITE_API_URL=http://localhost:3000
 ```
 
 **Acceptance Criteria**:
-- [ ] `npm run dev` starts dev server
-- [ ] Basic page loads
-- [ ] Dependencies installed
-- [ ] `@sveltejs/adapter-static` configured with `fallback: 'index.html'`
-- [ ] `frontend/.env.example` exists with `VITE_API_URL`
+- [x] `npm run dev` starts dev server
+- [x] Basic page loads
+- [x] Dependencies installed
+- [x] `@sveltejs/adapter-static` configured with `fallback: 'index.html'`
+- [x] `frontend/.env.example` exists with `VITE_API_URL`
 
 ---
 
 ### Task 23: API Client Setup
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create API client for `GET /api/doom`
@@ -164,15 +164,15 @@ export async function getDoom(): Promise<DoomResponse> {
 ```
 
 **Acceptance Criteria**:
-- [ ] API client created
-- [ ] Types defined (including evidence)
-- [ ] Error handling added
-- [ ] Environment variable for API URL
+- [x] API client created
+- [x] Types defined (including evidence)
+- [x] Error handling added
+- [x] Environment variable for API URL
 
 ---
 
 ### Task 24: Daily Card Component
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `DailyCard.svelte` component
@@ -228,17 +228,17 @@ export async function getDoom(): Promise<DoomResponse> {
 ```
 
 **Acceptance Criteria**:
-- [ ] Card displays sentiment
-- [ ] Card displays meme image
-- [ ] Card displays AI message
-- [ ] Card displays evidence phrases
-- [ ] Card displays top 5 posts
-- [ ] Styled with Tailwind/shadcn
+- [x] Card displays sentiment
+- [x] Card displays meme image
+- [x] Card displays AI message
+- [x] Card displays evidence phrases
+- [x] Card displays top 5 posts
+- [x] Styled with Tailwind/shadcn
 
 ---
 
 ### Task 25: Weekly Card Component
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `WeeklyCard.svelte` component
@@ -299,15 +299,15 @@ export async function getDoom(): Promise<DoomResponse> {
 ```
 
 **Acceptance Criteria**:
-- [ ] Card displays sentiment trend chart
-- [ ] Card displays aggregated data
-- [ ] Card displays evidence phrases
-- [ ] Chart shows last 7 days
+- [x] Card displays sentiment trend chart
+- [x] Card displays aggregated data
+- [x] Card displays evidence phrases
+- [x] Chart shows last 7 days
 
 ---
 
 ### Task 26: Monthly Card Component
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `MonthlyCard.svelte` component
@@ -320,15 +320,15 @@ export async function getDoom(): Promise<DoomResponse> {
 Similar to Weekly Card, but with 30-day history.
 
 **Acceptance Criteria**:
-- [ ] Card displays sentiment trend chart
-- [ ] Card displays aggregated data
-- [ ] Card displays evidence phrases
-- [ ] Chart shows last 30 days
+- [x] Card displays sentiment trend chart
+- [x] Card displays aggregated data
+- [x] Card displays evidence phrases
+- [x] Chart shows last 30 days
 
 ---
 
 ### Task 27: Chart Component
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `Chart.svelte` component using Chart.js
@@ -365,15 +365,15 @@ Similar to Weekly Card, but with 30-day history.
 ```
 
 **Acceptance Criteria**:
-- [ ] Chart displays sentiment over time
-- [ ] X-axis: dates
-- [ ] Y-axis: sentiment (0-100)
-- [ ] Styled with Tailwind
+- [x] Chart displays sentiment over time
+- [x] X-axis: dates
+- [x] Y-axis: sentiment (0-100)
+- [x] Styled with Tailwind
 
 ---
 
 ### Task 30: Dockerfile for Svelte Frontend
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create `Dockerfile` for Svelte frontend
@@ -412,11 +412,11 @@ CMD ["serve", "-s", "build", "-l", "80"]
 ```
 
 **Acceptance Criteria**:
-- [ ] Docker image builds successfully
-- [ ] Container starts on port 80
-- [ ] Frontend accessible at `/`
-- [ ] No nginx dependency
-- [ ] Static files served by `serve` package
+- [x] Docker image builds successfully
+- [x] Container starts on port 80
+- [x] Frontend accessible at `/`
+- [x] No nginx dependency
+- [x] Static files served by `serve` package
 
 **Notes**:
 - Using `serve` package instead of nginx (simpler setup)
@@ -428,14 +428,14 @@ CMD ["serve", "-s", "build", "-l", "80"]
 ## After Wave Completion
 
 ### Checklist
-- [ ] All tasks marked complete
-- [ ] `npm run dev` succeeds
-- [ ] Frontend loads in browser
-- [ ] All 3 cards render
-- [ ] Memes display correctly
-- [ ] Charts render properly
-- [ ] Evidence phrases display
-- [ ] Dockerfile builds successfully
+- [x] All tasks marked complete
+- [x] `npm run dev` succeeds
+- [x] Frontend loads in browser
+- [x] All 3 cards render
+- [x] Memes display correctly
+- [x] Charts render properly
+- [x] Evidence phrases display
+- [x] Dockerfile builds successfully
 
 ### Next Wave
 Move to **Wave 4: Integration + Deployment** - needs Waves 1-3 complete.

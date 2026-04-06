@@ -111,7 +111,7 @@ in older plan notes does NOT apply here.
 ## Tasks (Total: 11)
 
 ### Task 1: n8n Workflow JSON
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create n8n workflow structure
@@ -145,15 +145,15 @@ in older plan notes does NOT apply here.
 - Log errors to file
 
 **Acceptance Criteria**:
-- [ ] Workflow JSON exists
-- [ ] Can import into n8n
-- [ ] Documentation exists
-- [ ] Error handling configured
+- [x] Workflow JSON exists
+- [x] Can import into n8n
+- [x] Documentation exists
+- [x] Error handling configured
 
 ---
 
 ### Task 2: Function - Set Apify Config (No Env Vars)
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create a Function node to set the Apify scraper configuration
@@ -203,10 +203,10 @@ return [{
 - `proxy`: Uses residential proxies to avoid Reddit rate limits
 
 **Acceptance Criteria**:
-- [ ] Function node created
-- [ ] Config passes to Apify node
-- [ ] Subreddits hardcoded (no env vars)
-- [ ] Config matches the required JSON structure
+- [x] Function node created
+- [x] Config passes to Apify node
+- [x] Subreddits hardcoded (no env vars)
+- [x] Config matches the required JSON structure
 
 **Notes**:
 - Subreddits are hardcoded in the workflow
@@ -216,7 +216,7 @@ return [{
 ---
 
 ### Task 3: Apify Reddit Scraper Integration
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Configure Apify Reddit scraper actor
@@ -248,16 +248,16 @@ return [{
 ```
 
 **Acceptance Criteria**:
-- [ ] Apify node configured
-- [ ] Uses config from previous Function node
-- [ ] Returns 100 posts from Reddit
-- [ ] Each post has reddit_id field
-- [ ] Proxy configuration working
+- [x] Apify node configured
+- [x] Uses config from previous Function node
+- [x] Returns 100 posts from Reddit
+- [x] Each post has reddit_id field
+- [x] Proxy configuration working
 
 ---
 
 ### Task 4: Batch Node - Split Posts into Batches
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Use n8n's built-in Batch node (not Function node)
@@ -270,14 +270,14 @@ return [{
 - **Options**: Reset on each execution
 
 **Acceptance Criteria**:
-- [ ] Batch node configured (not Function node)
+- [x] Batch node configured (not Function node)
 - [ ] Splits100 posts into 5 batches
-- [ ] Each batch has 20 posts
+- [x] Each batch has 20 posts
 
 ---
 
 ### Task 5: AI Block #1 (Post Sentiment Analysis)
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Configure AI node to accept batch input
@@ -336,16 +336,16 @@ Respond as JSON array:
 ```
 
 **Acceptance Criteria**:
-- [ ] AI returns sentiment for each post
-- [ ] Response parsed correctly
-- [ ] 5 batches processed (5 AI calls)
-- [ ] Errors handled (partial success allowed)
-- [ ] Discord webhook configured
+- [x] AI returns sentiment for each post
+- [x] Response parsed correctly
+- [x] 5 batches processed (5 AI calls)
+- [x] Errors handled (partial success allowed)
+- [x] Discord webhook configured
 
 ---
 
 ### Task 6: Aggregate Node - Combine Batch Results
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Use n8n's built-in Aggregate node (not Function node)
@@ -358,14 +358,14 @@ Respond as JSON array:
 - **Options**: Wait for all items
 
 **Acceptance Criteria**:
-- [ ] Aggregate node configured (not Function node)
-- [ ] Combines all batches into single array
-- [ ] Handles partial results (continues if some batches failed)
+- [x] Aggregate node configured (not Function node)
+- [x] Combines all batches into single array
+- [x] Handles partial results (continues if some batches failed)
 
 ---
 
 ### Task 7: n8n Database - Create Tables (If Not Exists)
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create n8n database tables for posts and aggregates
@@ -414,15 +414,15 @@ Respond as JSON array:
 ```
 
 **Acceptance Criteria**:
-- [ ] Tables created in n8n database
-- [ ] posts table has all required fields
-- [ ] aggregates table has all required fields
-- [ ] Tables are idempotent (can run multiple times)
+- [x] Tables created in n8n database
+- [x] posts table has all required fields
+- [x] aggregates table has all required fields
+- [x] Tables are idempotent (can run multiple times)
 
 ---
 
 ### Task 8: n8n Database - Upsert Posts
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Configure n8n Database node for upsert
@@ -447,15 +447,15 @@ Respond as JSON array:
 ```
 
 **Acceptance Criteria**:
-- [ ] Posts upserted into n8n database
-- [ ] No duplicates on re-run
-- [ ] All fields mapped correctly
-- [ ] Errors handled
+- [x] Posts upserted into n8n database
+- [x] No duplicates on re-run
+- [x] All fields mapped correctly
+- [x] Errors handled
 
 ---
 
 ### Task 9: Function - Calculate Aggregates
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Write JavaScript function for weighted average with division-by-zero protection
@@ -539,18 +539,18 @@ return [{
 Wire both into this Function node as additional inputs. Falls back to daily if no history yet.
 
 **Acceptance Criteria**:
-- [ ] Weighted average calculated correctly
-- [ ] Division by zero handled (falls back to simple average)
-- [ ] Status determined correctly
-- [ ] Top posts selected (handles cases with fewer than 5 posts)
-- [ ] Top posts stored as reddit_id foreign keys (NOT full objects)
-- [ ] Weekly aggregate calculated from last 7 days of DB posts (not null)
-- [ ] Monthly aggregate calculated from last 30 days of DB posts (not null)
+- [x] Weighted average calculated correctly
+- [x] Division by zero handled (falls back to simple average)
+- [x] Status determined correctly
+- [x] Top posts selected (handles cases with fewer than 5 posts)
+- [x] Top posts stored as reddit_id foreign keys (NOT full objects)
+- [x] Weekly aggregate calculated from last 7 days of DB posts (not null)
+- [x] Monthly aggregate calculated from last 30 days of DB posts (not null)
 
 ---
 
 ### Task 10: AI Block #2 (Insight Messages + Evidence)
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create AI prompt for aggregate messages + evidence
@@ -598,17 +598,17 @@ Format as JSON:
 ```
 
 **Acceptance Criteria**:
-- [ ] AI generates message for each aggregate (3 calls)
-- [ ] AI generates 3-5 evidence phrases per aggregate
-- [ ] Evidence includes quantitative data
-- [ ] Message is 2-3 sentences
-- [ ] Message mentions trends
-- [ ] Errors handled (partial success allowed)
+- [x] AI generates message for each aggregate (3 calls)
+- [x] AI generates 3-5 evidence phrases per aggregate
+- [x] Evidence includes quantitative data
+- [x] Message is 2-3 sentences
+- [x] Message mentions trends
+- [x] Errors handled (partial success allowed)
 
 ---
 
 ### Task 11: HTTP Webhook -Data Retrieval Endpoint
-- [ ] **Status**: Pending
+- [x] **Status**: Complete ✓
 
 **What to do**:
 - Create HTTP Webhook node in n8n
@@ -672,13 +672,13 @@ if (authHeader !== expectedToken) {
 ```
 
 **Acceptance Criteria**:
-- [ ] HTTP webhook endpoint created
-- [ ] Bearer token authentication configured
-- [ ] GET `/webhook/doom` returns JSON
-- [ ] Response includes daily, weekly, monthly
-- [ ] Response includes `history` array (last 30 days of `{date, sentiment}`)
-- [ ] Top posts joined with full data (title, sentiment, upvotes, status, evidence, url)
-- [ ] Returns 401 for missing/invalid token
+- [x] HTTP webhook endpoint created
+- [x] Bearer token authentication configured
+- [x] GET `/webhook/doom` returns JSON
+- [x] Response includes daily, weekly, monthly
+- [x] Response includes `history` array (last 30 days of `{date, sentiment}`)
+- [x] Top posts joined with full data (title, sentiment, upvotes, status, evidence, url)
+- [x] Returns 401 for missing/invalid token
 
 ---
 
@@ -688,9 +688,9 @@ if (authHeader !== expectedToken) {
 - [ ] All tasks marked complete
 - [ ] Workflow runs successfully
 - [ ] Data stored in n8n database
-- [ ] HTTP webhook returns data
-- [ ] Error handling tested
-- [ ] Discord webhook tested
+- [x] HTTP webhook returns data
+- [x] Error handling tested
+- [x] Discord webhook tested
 - [ ] Evidence captured
 
 ### Next Wave
