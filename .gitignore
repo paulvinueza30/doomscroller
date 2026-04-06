@@ -1,0 +1,41 @@
+# Environment variables
+.env
+*.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+bun.lockb
+
+# Build outputs
+dist/
+build/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets
+secrets/
+*.pem
+*.key
+
+# Docker
+.docker/
+
+# n8n
+n8n-data/
+
+# Backend compiled binary
+backend/server
+
+# Meme images (must be downloaded at setup)
+backend/public/memes/*
+!backend/public/memes/.gitkeep

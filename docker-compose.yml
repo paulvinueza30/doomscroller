@@ -1,0 +1,55 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: https://doomscroll.paulvinueza.dev
+    image: doomscroll-frontend:latest
+    container_name: doomscroll-frontend
+    restart: unless-stopped
+    networks:
+      - app-network
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.doomscroll-frontend.rule=Host(`doomscroll.paulvinueza.dev`)"
+      - "traefik.http.routers.doomscroll-frontend.entrypoints=websecure"
+      - "traefik.http.routers.doomscroll-frontend.tls.certresolver=myresolver"
+      - "traefik.http.services.doomscroll-frontend.loadbalancer.server.port=80"
+      - "traefik.http.routers.doomscroll-frontend-http.entrypoints=web"
+      - "traefik.http.routers.doomscroll-frontend-http.rule=Host(`doomscroll.paulvinueza.dev`)"
+      - "traefik.http.routers.doomscroll-frontend-http.middlewares=redirect-to-https@docker"
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: doomscroll-backend:latest
+    container_name: doomscroll-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - app-network
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.doomscroll-api.rule=Host(`doomscroll.paulvinueza.dev`) && (PathPrefix(`/api`) || PathPrefix(`/memes`) || PathPrefix(`/health`))"
+      - "traefik.http.routers.doomscroll-api.entrypoints=websecure"
+      - "traefik.http.routers.doomscroll-api.tls.certresolver=myresolver"
+      - "traefik.http.services.doomscroll-api.loadbalancer.server.port=3000"
+      - "traefik.http.routers.doomscroll-api-http.entrypoints=web"
+      - "traefik.http.routers.doomscroll-api-http.rule=Host(`doomscroll.paulvinueza.dev`) && (PathPrefix(`/api`) || PathPrefix(`/memes`) || PathPrefix(`/health`))"
+      - "traefik.http.routers.doomscroll-api-http.middlewares=redirect-to-https@docker"
+
+networks:
+  app-network:
+    driver: bridge
+  proxy:
+    external: true
